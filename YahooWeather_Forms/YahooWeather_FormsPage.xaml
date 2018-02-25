@@ -14,7 +14,7 @@
 
     <Grid>
         <!--  -->
-        <Image x:Name="imageBackground" Source="wallpaper5.jpg" Aspect="AspectFill" />
+        <Image x:Name="imageBackground" Source="wallpaper5.jpg" Aspect="AspectFill" Opacity = "0.5" />
 
         <StackLayout>
             <Picker x:Name = "picker" Title = " 地域選択" SelectedIndexChanged = "OnSelectedIndexChanged" />

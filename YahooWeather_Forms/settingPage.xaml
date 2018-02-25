@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="YahooWeather_Forms.settingPage">
+    
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+    </ContentPage.Padding>
+    
+    <ContentPage.Content>
+        <Grid>
+        <!--  -->
+        <Image x:Name="imageBackground2" Source="wallpaper5.jpg" Aspect="AspectFill" Opacity = "0.5" />
+
+            <StackLayout HorizontalOptions="Center">
+                <Entry x:Name="Entry1" Placeholder="保存する画像のURLを入力してください。" HorizontalOptions="Center" Margin="10"></Entry>
+                <Button x:Name="SaveButton1" Text="保存" HorizontalOptions="Center" Clicked="Button1_Clicked"></Button>
+                <Label x:Name="WallpaperLabel1" Text="" HorizontalOptions="Center" FontSize="10"></Label>
+
+                <Entry x:Name="Entry2" Placeholder="保存する画像のURLを入力してください。" HorizontalOptions="Center" Margin="10"></Entry>
+                <Button x:Name="SaveButton2" Text="保存" HorizontalOptions="Center" Clicked="Button2_Clicked"></Button>
+                <Label x:Name="WallpaperLabel2" Text="" HorizontalOptions="Center" FontSize="10"></Label>
+
+                <Entry x:Name="Entry3" Placeholder="保存する画像のURLを入力してください。" HorizontalOptions="Center" Margin="10"></Entry>
+                <Button x:Name="SaveButton3" Text="保存" HorizontalOptions="Center" Clicked="Button3_Clicked"></Button>
+                <Label x:Name="WallpaperLabel3" Text="" HorizontalOptions="Center" FontSize="10"></Label>
+            </StackLayout>
+            
+        </Grid>    
+    </ContentPage.Content>
+</ContentPage>

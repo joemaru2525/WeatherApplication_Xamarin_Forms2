@@ -11,7 +11,7 @@
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)YahooWeather_FormsPage.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SettingPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)settingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -23,8 +23,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)YahooWeather_FormsPage.xaml.cs">
       <DependentUpon>YahooWeather_FormsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)SettingPage.xaml.cs">
-      <DependentUpon>SettingPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)settingPage.xaml.cs">
+      <DependentUpon>settingPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

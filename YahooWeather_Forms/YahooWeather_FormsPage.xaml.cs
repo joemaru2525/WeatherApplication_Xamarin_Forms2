@@ -165,6 +165,7 @@ namespace YahooWeather_Forms
         }
 
         int timerCount = 0;
+        string wallpaperUrl;
 
         public YahooWeather_FormsPage()
         {
@@ -179,24 +180,54 @@ namespace YahooWeather_Forms
             {
                 // タイマー処理
                 timerCount = timerCount + 1;
-                System.Diagnostics.Debug.WriteLine(timerCount);
+                //System.Diagnostics.Debug.WriteLine(timerCount);
 
                 if (timerCount >= timerInterval * 3)
                 {
                     timerCount = 0;
-                    System.Diagnostics.Debug.WriteLine("Clear");
-                    imageBackground.Source = "wallpaper5.jpg";
-                    System.Diagnostics.Debug.WriteLine("image5");
+                    if (Application.Current.Properties.ContainsKey(settingPage.KeyText3))
+                    {
+                        wallpaperUrl = Application.Current.Properties[settingPage.KeyText3] as string;
+                        if (wallpaperUrl == null || wallpaperUrl == "")
+                        {
+                            wallpaperUrl = "wallpaper5.jpg";
+                        }
+                        imageBackground.Source = wallpaperUrl;
+                    }
+                    else
+                    {
+                        imageBackground.Source = "wallpaper5.jpg";
+                    }
                 }
                 else if (timerCount >= timerInterval * 2)
                 {
-                    imageBackground.Source = "wallpaper4.jpg";
-                    System.Diagnostics.Debug.WriteLine("image4");
+                    if (Application.Current.Properties.ContainsKey(settingPage.KeyText2))
+                    {
+                        wallpaperUrl = Application.Current.Properties[settingPage.KeyText2] as string;
+                        if (wallpaperUrl == null || wallpaperUrl == "")
+                        {
+                            wallpaperUrl = "wallpaper4.jpg";
+                        }
+                        imageBackground.Source = wallpaperUrl;
+                    }
+                    else
+                    {
+                        imageBackground.Source = "wallpaper4.jpg";
+                    }
                 }  
                 else 
                 {
-                    imageBackground.Source = "wallpaper3.jpg";
-                    System.Diagnostics.Debug.WriteLine("image3");
+                    if (Application.Current.Properties.ContainsKey(settingPage.KeyText1))
+                    {
+                        wallpaperUrl = Application.Current.Properties[settingPage.KeyText1] as string;
+                        if (wallpaperUrl == null || wallpaperUrl == "")
+                        {
+                            wallpaperUrl = "wallpaper3.jpg";
+                        }
+                        imageBackground.Source = wallpaperUrl;
+                    } else {
+                        imageBackground.Source = "wallpaper3.jpg";
+                    }
                 } 
 
                 return true;
@@ -283,7 +314,7 @@ namespace YahooWeather_Forms
 
         private async void OnTransitNextPage(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new SettingPage(), true);
+            await this.Navigation.PushAsync(new settingPage(), true);
         }
 
         private void Btn1_Clicked(object sender, EventArgs e)
