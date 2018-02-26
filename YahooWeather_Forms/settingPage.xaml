@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="YahooWeather_Forms.settingPage">
+    x:Class="YahooWeather_Forms.settingPage"
+    Title="設定画面" >
     
 	<ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
@@ -24,6 +25,9 @@
                 <Entry x:Name="Entry3" Placeholder="保存する画像のURLを入力してください。" HorizontalOptions="Center" Margin="10"></Entry>
                 <Button x:Name="SaveButton3" Text="保存" HorizontalOptions="Center" Clicked="Button3_Clicked"></Button>
                 <Label x:Name="WallpaperLabel3" Text="" HorizontalOptions="Center" FontSize="10"></Label>
+
+                <Slider x:Name="Slider1" Value="0.5" Minimum="0" Maximum="1" ValueChanged="OnSliderValueChanged" />
+                <Label x:Name="OpacityLabel1" Text="" HorizontalOptions="Center" FontSize="10"></Label>
             </StackLayout>
             
         </Grid>    

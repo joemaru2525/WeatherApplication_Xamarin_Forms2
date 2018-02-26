@@ -3,7 +3,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:YahooWeather_Forms" 
-    x:Class="YahooWeather_Forms.YahooWeather_FormsPage" >
+    x:Class="YahooWeather_Forms.YahooWeather_FormsPage"
+    Title="メイン画面" >
         
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -46,9 +47,8 @@
                 <Label x:Name="labelPrecip04" Text="---" WidthRequest="70" />
             </StackLayout>
 
-            <Button x:Name="btn0" Text="設定ページ" Clicked="OnTransitNextPage" />
-            <Label Text="" />
-            <Label Text="" />
+            <Button x:Name="btn0" Text="設定ページ" Clicked="OnTransitNextPage" VerticalOptions="StartAndExpand" />
+            
             <Button x:Name="btn1" Text="Powered by Yahoo! Japan Weather" />
             
         </StackLayout>

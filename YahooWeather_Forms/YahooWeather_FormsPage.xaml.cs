@@ -182,6 +182,13 @@ namespace YahooWeather_Forms
                 timerCount = timerCount + 1;
                 //System.Diagnostics.Debug.WriteLine(timerCount);
 
+                if (Application.Current.Properties.ContainsKey(settingPage.KeyText4))
+                {
+                    String Opacity1 = Application.Current.Properties[settingPage.KeyText4] as string;
+                    System.Diagnostics.Debug.WriteLine("Opacity: " + Opacity1);
+                    imageBackground.Opacity = double.Parse(Opacity1);
+                }
+
                 if (timerCount >= timerInterval * 3)
                 {
                     timerCount = 0;

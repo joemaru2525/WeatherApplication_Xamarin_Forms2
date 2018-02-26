@@ -10,6 +10,7 @@ namespace YahooWeather_Forms
         public const string KeyText1 = "myText1";
         public const string KeyText2 = "myText2";
         public const string KeyText3 = "myText3";
+        public const string KeyText4 = "myText4";
 
         //http://theiphonewalls.com/wp-content/uploads/2014/11/Fantasy-Cloudy-Space.jpg
         //http://theiphonewalls.com/wp-content/uploads/2013/06/Alemania-Sand.jpg
@@ -67,6 +68,15 @@ namespace YahooWeather_Forms
                 this.WallpaperLabel3.Text = Application.Current.Properties[KeyText3] as string;
                 imageBackground2.Source = this.WallpaperLabel3.Text;
             }
+        }
+
+        public void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            // ラベルに変化した値を表示する
+            System.Diagnostics.Debug.WriteLine(Slider1.Value);
+            imageBackground2.Opacity = Slider1.Value;
+            Application.Current.Properties[KeyText4] = Slider1.Value.ToString();    // 保存
+            this.OpacityLabel1.Text = Application.Current.Properties[KeyText4] as string;
         }
     }
 }
