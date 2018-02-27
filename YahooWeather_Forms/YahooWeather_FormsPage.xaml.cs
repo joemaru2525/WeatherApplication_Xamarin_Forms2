@@ -174,6 +174,8 @@ namespace YahooWeather_Forms
             //BackgroundImage="wallpaper5.jpg";
             //imageBackground.Source = "wallpaper5.jpg";
 
+            UpdateBackgroundOpacity();
+
             int timerInterval = 1;  //10seconds
 
             Device.StartTimer(TimeSpan.FromSeconds(10), () =>
@@ -182,12 +184,7 @@ namespace YahooWeather_Forms
                 timerCount = timerCount + 1;
                 //System.Diagnostics.Debug.WriteLine(timerCount);
 
-                if (Application.Current.Properties.ContainsKey(settingPage.KeyText4))
-                {
-                    String Opacity1 = Application.Current.Properties[settingPage.KeyText4] as string;
-                    System.Diagnostics.Debug.WriteLine("Opacity: " + Opacity1);
-                    imageBackground.Opacity = double.Parse(Opacity1);
-                }
+                UpdateBackgroundOpacity();
 
                 if (timerCount >= timerInterval * 3)
                 {
@@ -334,6 +331,16 @@ namespace YahooWeather_Forms
         public interface IWebBrowserService
         {
             void Open(Uri uri);
+        }
+
+        private void UpdateBackgroundOpacity()
+        {
+            if (Application.Current.Properties.ContainsKey(settingPage.KeyText4))
+            {
+                String Opacity1 = Application.Current.Properties[settingPage.KeyText4] as string;
+                System.Diagnostics.Debug.WriteLine("Opacity: " + Opacity1);
+                imageBackground.Opacity = double.Parse(Opacity1);
+            }
         }
 
     }
