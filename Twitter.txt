@@ -1,0 +1,24 @@
+ Consumer Key (API Key) 
+ YauXOazwzi3OwsKAINyixbJw5
+ 
+Consumer Secret (API Secret) 
+8FN1IMjOLLDsNprkH7ltIrsHkLoMzxNVwnnssf4pyWIVUfy5ZT 
+
+
+ Access Token 
+ 137666424-lmeWR32nk8ikSlB5UIWmnCNC2bWKm9J3fiZzkfiZ 
+
+
+ Access Token Secret 
+NZ80fFWUJicmBZumdQlvx2JwZiq74B73oyiXtqAvynrnn
+
+
+node0[0].InnerText
+ + "発表日時: " + node1[0].InnerText
+ + "天気: " + node3[0].InnerText
+ + "最高気温 [前日差]: " + node4[0].InnerText
+ + "最低気温 [前日差]: " + node5[0].InnerText
+ + "降水確立 0-6時: " node6[0].InnerText 
+ + "6-12時: " node6[1].InnerText 
+ + "降水確立 12-18時: " node6[2].InnerText
+ + "降水確立 18-24時: " node6[3].InnerText

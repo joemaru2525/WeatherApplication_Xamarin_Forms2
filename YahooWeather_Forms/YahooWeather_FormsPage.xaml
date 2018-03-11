@@ -48,7 +48,6 @@
             </StackLayout>
 
             <Button x:Name="btn0" Text="設定ページ" Clicked="OnTransitNextPage" VerticalOptions="StartAndExpand" />
-            
             <Button x:Name="btn1" Text="Powered by Yahoo! Japan Weather" />
             
         </StackLayout>

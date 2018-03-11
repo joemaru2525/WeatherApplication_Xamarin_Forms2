@@ -3,6 +3,8 @@ using System;
 using HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 
 namespace YahooWeather_Forms
@@ -166,6 +168,7 @@ namespace YahooWeather_Forms
 
         int timerCount = 0;
         string wallpaperUrl;
+        string textTweet;
 
         public YahooWeather_FormsPage()
         {
@@ -313,6 +316,19 @@ namespace YahooWeather_Forms
             HtmlNodeCollection node7 = doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//p[@class='pict']//img");
             var imageURL = node7[0].GetAttributeValue("src", "");
             imageWeather.Source = imageURL;
+
+            //Tweet
+            textTweet = node0[0].InnerText + node1[0].InnerText + ", 天気: " + node3[0].InnerText + 
+                                ", 最高気温 [前日差]: " + node4[0].InnerText + ", 最低気温 [前日差]: " + node5[0].InnerText + 
+                                ", 降水確立 0-6時: " + node6[0].InnerText + " 6-12時: " + node6[1].InnerText + " 12-18時: " + 
+                                node6[2].InnerText  + " 18-24時: " + node6[3].InnerText;
+
+            var tokens = CoreTweet.Tokens.Create("YauXOazwzi3OwsKAINyixbJw5"
+                                                 , "8FN1IMjOLLDsNprkH7ltIrsHkLoMzxNVwnnssf4pyWIVUfy5ZT"
+                                                 , "137666424-lmeWR32nk8ikSlB5UIWmnCNC2bWKm9J3fiZzkfiZ"
+                                                 , "NZ80fFWUJicmBZumdQlvx2JwZiq74B73oyiXtqAvynrnn");
+
+            tokens.Statuses.Update(new { status = textTweet });
         }
 
 
@@ -326,6 +342,11 @@ namespace YahooWeather_Forms
             //this.btn1.Text = "クリックした";
             var uri = "https://weather.yahoo.co.jp/weather/";
             DependencyService.Get<IWebBrowserService>().Open(new Uri(uri)); // open in WebBrowser
+        }
+
+        private void Btn2_Clicked()
+        {
+            
         }
 
         public interface IWebBrowserService
