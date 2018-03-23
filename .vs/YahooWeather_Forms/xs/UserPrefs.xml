@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{A7C8861F-C771-404C-911D-D7260780ADC2}|Default">
+  <MonoDevelop.Ide.ItemProperties.YahooWeather__Forms.Droid PreferredExecutionTarget="Android.Pixel_2_XL_API_23" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="YahooWeather_Forms/YahooWeather_FormsPage.xaml.cs">
+    <Files>
+      <File FileName="YahooWeather_Forms/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="YahooWeather_Forms/settingPage.xaml" Line="36" Column="1" />
+      <File FileName="YahooWeather_Forms/settingPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="YahooWeather_Forms/YahooWeather_FormsPage.xaml" Line="56" Column="15" />
+      <File FileName="YahooWeather_Forms/YahooWeather_FormsPage.xaml.cs" Line="331" Column="1" />
+      <File FileName="Droid/Assets/AboutAssets.txt" Line="1" Column="1" />
+      <File FileName="YahooWeather_Forms/App.xaml" Line="7" Column="1" />
+      <File FileName="iOS/obj/iPhoneSimulator/Debug/YahooWeather_Forms.iOS.YahooWeather_FormsPage.xaml.g.cs" Line="68" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.YahooWeather__Forms.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E6DA1DDE-4258-42EE-B6B3-386208F940FF" automaticSigning="False" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
